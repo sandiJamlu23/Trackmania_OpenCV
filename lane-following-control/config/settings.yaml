@@ -1,0 +1,29 @@
+lane_detection:
+  enable: true
+  color_thresholds:
+    lower: [200, 200, 200]
+    upper: [255, 255, 255]
+  edge_detection:
+    low_threshold: 50
+    high_threshold: 150
+
+pid_controller:
+  kp: 0.5
+  ki: 0.1
+  kd: 0.05
+  setpoint: 0.0
+
+image_processing:
+  resize:
+    width: 640
+    height: 480
+  blur:
+    kernel_size: 5
+
+logging:
+  level: INFO
+  file: logs/lane_following.log
+
+output:
+  display: true
+  save_images: false
